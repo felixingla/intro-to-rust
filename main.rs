@@ -1,7 +1,132 @@
 fn main() {
 
+
         println!("");
-        println!("30, Oct 2022");
+        println!("1, Nov 2022");
+        
+        println!("");println!("");
+
+                /* 
+                Another way to add to String objects together is 
+                using a macro function called format. 
+                The use of Format! is as shown below.
+                */
+
+                let n1 = "Tutorials".to_string();
+                let n2 = "Point".to_string();
+                let n3 = format!("{} {}",n1,n2);
+                println!("{}",n3);
+
+        
+        println!("");println!("");
+                
+                /*
+                A string value can be appended to another string. 
+                This is called concatenation or interpolation. 
+                The result of string concatenation is a new string object. 
+                The + operator internally uses an add method. 
+                The syntax of the add function takes two parameters. 
+                The first parameter is self – the string object itself and the second parameter is a reference of the second string object. This is shown below −
+                */
+
+                let name = "Felix".to_string();
+                let last_name = "Ingla".to_string();
+                let full_name = name + &last_name;
+                println!("{}", full_name);
+
+
+
+        println!("");println!("");
+
+                let n1 = "Tutorials".to_string();
+                let mut i = 1;
+                for n in n1.chars(){
+                        println!("{}: {}", i, n);
+                        i += 1;
+                }
+
+        println!("");println!("");
+
+                //The split() string method returns an iterator over 
+                //substrings of a string slice, separated by characters 
+                //matched by a pattern. The limitation of the split() method 
+                //is that the result cannot be stored for later use. 
+                //The collect method can be used to store the result 
+                //returned by split() as a vector.
+
+                let fullname = "Kannan,Sudhakaran,Tutorialspoint";
+                let mut i = 1;
+
+                for token in fullname.split(","){
+                        println!("{}: token is {}",i,token);
+                        i += 1;
+                }
+        
+                //store in a Vector
+                println!("\n");
+                let tokens:Vec<&str> = fullname.split(",").collect();
+                println!("firstName is {}",tokens[0]);
+                println!("lastname is {}",tokens[1]);
+                println!("company is {}",tokens[2]);
+
+        println!("");println!("");
+
+                let msg = "Tutorials Point has good tutorials".to_string();
+                let mut i = 1;
+
+                for token in msg.split_whitespace(){
+                println!("{}: {}", i ,token);
+                i = i + 1;
+                }
+
+        println!("");println!("");
+
+                //The push_str() function appends a given 
+                //string slice onto the end of a String.
+                let mut company = "Tutorial".to_string();
+                company.push_str("s for beginners");
+                println!("{}",company);
+
+        println!("");println!("");
+
+                //To access all methods of String object, 
+                //convert a string literal to object type 
+                //using the to_string() function.
+                let new_string_2 = "Hello".to_string();
+                println!("{}", new_string_2);
+                //Replace function
+                let new_string_3 = new_string_2.replace("Hello", "Good morning");
+                println!("{}", new_string_3);
+                
+        
+        println!("");println!("");
+        
+                // An empty string object is created using the new() method 
+                // and its value is set to hello:
+                let mut new_string = String::new();
+                new_string.push_str("hello");
+                println!("{}", new_string);
+
+
+        println!("");println!("");
+
+                let empty_string = String::new();
+                println!("length is {}", empty_string.len());
+
+                let content_string = String::from("TutorialsPoint");
+                println!("length is {}", content_string.len());
+
+
+        println!("");println!("");
+
+                let company:&'static str = "TutorialsPoint";
+                let location:&'static str = "Hyderabad";
+                println!("company is : {} location :{}",company,location);
+
+/*
+
+        println!("");
+        println!("31, Oct 2022");
         
         println!("");println!("");
 
@@ -79,9 +204,9 @@ fn main() {
                 println!("company is growing: {}",is_growing_boolean);
                 println!("company icon is: {}",icon_char);
 
-/*
+
         println!("");
-        println!("31, Oct 2022");
+        println!("30, Oct 2022");
         println!("");println!("");
 
                 // In general, the `{}` will be automatically replaced with any
