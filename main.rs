@@ -1,6 +1,156 @@
 fn main() {
 
 
+
+        println!("");
+        println!("2, Nov 2022");
+
+        println!("");println!("");
+
+                let name = String::from("Felix");
+                display(name);
+
+
+                fn display(param: String){
+                        println!("The name is: {}", param);
+                }
+
+        
+        println!("");println!("");
+        
+                /*
+                Pass by reference
+                */
+
+
+                let mut no:i32 = 5;
+                mutate_no_to_zero(&mut no);
+                println!("The value of no is:{}",no);
+
+                fn mutate_no_to_zero(param_no:&mut i32){
+                        *param_no = 0; //de reference
+                     }
+        
+
+                
+        println!("");println!("");
+
+                /* Functions are the building blocks of readable, maintainable, and reusable code. 
+                A function is a set of statements to perform a specific task. 
+                Functions organize the program into logical blocks of code. 
+                Once defined, functions may be called to access code. 
+                This makes the code reusable. Moreover, functions make it easy to read and maintain the program’s code.
+                */
+                
+                fn get_pi() -> f64 {
+                        return 22.0/7.0;
+                     }
+
+                println!("pi value is {}",get_pi());
+
+                fn fn_hello(){
+                        println!("hello from function fn_hello ");
+                     }
+
+                fn_hello();
+
+        
+        println!("");println!("");
+
+                // Loop with if and else
+
+                let mut x = 0;
+                
+                loop {
+                        x+=1;
+                        
+                        if x % 2 == 0 {
+                                println!("{} is even", x);
+                        }
+                        else {
+                                println!("{} is odd", x);
+                        }
+
+                        if x == 24 {
+                                break;
+                        }
+                }
+                
+        
+        println!("");println!("");
+
+                // While
+
+                let mut x = 0;
+                
+                while x < 10 {
+                        x+=1;
+                        println!("{}: Loop is running",x);
+                }
+                
+                println!("{}: Loop is finalized",x);
+
+        println!("");println!("");
+
+                // For
+
+                for x in 1..11{ // 11 is not inclusive
+                   if x==5 {
+                      println!("x is now {}",x);
+                   }
+                   println!("x is {}",x);
+                }
+             
+        println!("");println!("");
+        
+                /*
+                In the example given below, state_code is matched with a list of values MH, KL, KA, GA − 
+                if any match is found, a string value is returned to variable state. 
+                If no match is found, the default case _ matches and value Unkown is returned. 
+                */
+
+                let state_code = "KA";
+                let state = match state_code {
+                        "MH" => {println!("Found match for MH"); "Maharashtra"},
+                        "KL" => {println!("Found match for KL");"Kerala"},
+                        "KA" => {println!("Hello KA");"Karnadaka"},
+                        "GA" => "Goa",
+                        _ => "Unknown"
+                };
+
+                println!("State name is {}",state);
+
+        println!("");println!("");
+
+                //Check if number is positive or negative
+
+                let num = 1;
+                
+                if num > 0 {
+                        println!("{} is positive", num);
+                }
+                else if num < 0 {
+                        println!("{} is negative", num);
+                }
+                else {
+                        println!("{} is not positive nor negative", num);
+                }
+
+        println!("");println!("");
+
+                //Check if number is even or odd
+
+                let num = 12;
+                
+                if num % 2 == 0 {
+                        println!("True");
+                }
+                else {
+                        println!("False");
+                }
+
+
+
         println!("");
         println!("1, Nov 2022");
         
@@ -123,7 +273,7 @@ fn main() {
                 let location:&'static str = "Hyderabad";
                 println!("company is : {} location :{}",company,location);
 
-/*
+
 
         println!("");
         println!("31, Oct 2022");
@@ -277,6 +427,6 @@ fn main() {
                 let pi = 3.141592;
                 let width: usize = 3;
                 println!("Pi is roughly {pi:.width$}");
- */
+ 
 
 }
