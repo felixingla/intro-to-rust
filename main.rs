@@ -1,10 +1,100 @@
 fn main() {
 
+        println!("");println!("");
+        println!("––––– 6, Nov 2022 –––––");
+        println!("––––– Function: date_06_11_22 –––––");
+        println!("");println!("");
+        date_06_11_22();
 
+        fn date_06_11_22() {
+                
+
+        //Passing arrays as parameters to functions
+
+                // Pass by reference
+                let mut arr = [10, 20, 30, 40];
+                update_by_reference(&mut arr);
+                println!("In main {:?}", arr);
+
+                fn update_by_reference (arr:&mut [i32;4]){
+                        for i in 0..4 {
+                                arr[i] = 0;
+                        }
+                        println!("Set array to 0 {:?}", arr);
+                }
+        
+                // Pass by value
+                let arr_b = [10, 20, 30, 40];
+                update_by_value(arr_b);
+                println!("In main {:?}", arr_b);
+
+                fn update_by_value (mut arr:[i32;4]){
+                        for i in 0..4 {
+                                arr [i] = 0;
+                        }
+                        println!("Set array to 0 {:?}", arr);
+                }
 
         println!("");
-        println!("2, Nov 2022");
 
+        //Array
+
+        let arr = [10, 11, 12, 13];
+        println!("{:?}", arr);
+        println!("{:?}", arr);
+        
+        for index in 0..4 {
+                println!("Index is {} & and value is {}", index, arr[index]);
+        }
+
+        ;println!();
+
+        for value in arr.iter(){
+                println!("Value is: {}", value);
+        }
+
+        println!();println!();
+
+        //Destructing
+
+        let b = (30, true, 7.9);
+        print_2(b);
+
+        fn print_2(x: (i32, bool, f64)) {
+                println!("Inside print methods:");
+                let (age, is_male, cgpa) = x; //assigns a tuple to distinct variables
+                println!("age is:{}", age);
+                println!("is_male is? {}", is_male);
+                println!("cgpa is:{}", cgpa);    
+        }
+
+        println!("");println!("");
+
+        //The println!("{ }",tuple) syntax cannot be used to display values in a tuple. 
+        //This is because a tuple is a compound type. Use the println!("{:?}", tuple_name) 
+        //syntax to print values in a tuple.
+        let tuple = (1, 2, 3);
+        println!("{:?}", tuple);
+
+        println!("First: {:?}", tuple.0);
+        println!("Second: {:?}", tuple.1);
+        println!("Third: {:?}", tuple.2);
+
+        fn print(x: (i32, i32, i32)){
+                println!("Inside print method:");
+                println!("{:?}", x);
+        }
+
+        print (tuple);
+
+        }
+
+        println!("");println!("");
+        println!("––––– 2, Nov 2022 –––––");
+        println!("––––– Function: date_02_11_22 –––––");
+        date_02_11_22();
+
+        fn date_02_11_22() {
         println!("");println!("");
 
                 let name = String::from("Felix");
@@ -149,11 +239,14 @@ fn main() {
                         println!("False");
                 }
 
+        }
 
-
-        println!("");
-        println!("1, Nov 2022");
+        println!("");println!("");
+        println!("––––– 1, Nov 2022 –––––");
+        println!("––––– Function: date_01_11_22 –––––");
+        date_01_11_22();
         
+        fn date_01_11_22() {
         println!("");println!("");
 
                 /* 
@@ -273,11 +366,14 @@ fn main() {
                 let location:&'static str = "Hyderabad";
                 println!("company is : {} location :{}",company,location);
 
+        }
 
-
-        println!("");
-        println!("31, Oct 2022");
+        println!("");println!("");
+        println!("––––– 31, Oct 2022 –––––");
+        println!("––––– Function: date_31_10_22 –––––");
+        date_31_10_22();
         
+        fn date_31_10_22() {
         println!("");println!("");
 
                 let uname = "Felix";
@@ -353,11 +449,14 @@ fn main() {
                 println!("company rating on 5 is: {}",rating_float);
                 println!("company is growing: {}",is_growing_boolean);
                 println!("company icon is: {}",icon_char);
-
-
-        println!("");
-        println!("30, Oct 2022");
+        }
+        
         println!("");println!("");
+        println!("––––– 30, Oct 2022 –––––");
+        println!("––––– Function: date_30_10_22 –––––");
+        println!("");println!("");
+
+        fn date_30_10_22() {
 
                 // In general, the `{}` will be automatically replaced with any
                 // arguments. These will be stringified.
@@ -427,6 +526,8 @@ fn main() {
                 let pi = 3.141592;
                 let width: usize = 3;
                 println!("Pi is roughly {pi:.width$}");
+        }
  
+        date_30_10_22();
 
 }
