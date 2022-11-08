@@ -4,6 +4,37 @@ fn main() {
         println!("––––– 8, Nov 2022 –––––");
         println!("––––– Function: date_08_11_22 –––––");
         println!("");println!("");
+        date_08_11_22();
+        
+        fn date_08_11_22(){
+
+                //Example 2
+
+                //Mutable variable name
+                let mut name = String::from("TutorialsPoint");
+                println!("In fn main() before modification: {}", name);
+
+                //Pass mutable reference of variable name to display
+                display(&mut name);
+                println!("In fn main() after modification: {}", name);
+
+                fn display(x:&mut String){
+                        x.push_str(" Rocks");
+                        println!("In fn display() after modification: {}", x);
+                }
+                
+                //Example 1
+
+                let mut i = 3;
+
+                fn plus_one(x: &mut i32){
+                        *x += 1;
+                }
+
+                plus_one(&mut i);
+                println!("{}", i);
+
+        }
 
         println!("");println!("");
         println!("––––– 6, Nov 2022 –––––");
