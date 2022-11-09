@@ -1,6 +1,47 @@
 fn main() {
 
         println!("");println!("");
+        println!("––––– 9, Nov 2022 –––––");
+        println!("––––– Function: date_09_11_22 –––––");
+        println!("");println!("");
+        date_09_11_22();
+
+
+        fn date_09_11_22(){
+                //Example 1: String slices
+                
+                let n1 = "Tutorial".to_string();
+                println!("The length of string is {}", n1.len());
+                let c1 = &n1[4..8];
+                println!("{}", c1);
+
+                //Example 2: mutable slices
+
+                let mut data = [10, 20, 30, 40, 50];
+                
+                println!("print data: {:?}", data);
+
+                print!("first fn call: ");
+                use_slice(&mut data[0..1]);
+                
+                print!("second fn call: ");
+                use_slice(&mut data[0..2]);
+                
+                print!("third fn call: ");
+                use_slice(&mut data[0..3]);
+                
+                print!("fourth fn call: ");
+                use_slice(&mut data[0..4]);
+                
+                // passes references of 20, 30 and 40
+                
+                fn use_slice(slice:&mut [i32]){
+                        println!("{:?}", slice);
+                        slice[0]= 123;
+                }
+        }
+
+        println!("");println!("");
         println!("––––– 8, Nov 2022 –––––");
         println!("––––– Function: date_08_11_22 –––––");
         println!("");println!("");
