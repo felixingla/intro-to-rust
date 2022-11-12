@@ -4,7 +4,9 @@ fn main() {
         println!("––––– 12, Nov 2022 –––––");
         println!("––––– Function: date_12_11_22 –––––");
         println!("");println!("");
+        date_12_11_22();
 
+        fn date_12_11_22 (){
         //****Example 6
         println!("");println!("---EXAMPLE 6---");
         struct Point {
@@ -128,7 +130,7 @@ fn main() {
 
         println!("Name is: {}, company is {}, and age is {}", emp1.name, emp1.company, emp1.age);
 
-
+        }
 
         println!("");println!("");
         println!("––––– 9, Nov 2022 –––––");
@@ -735,9 +737,4 @@ fn main() {
                 let width: usize = 3;
                 println!("Pi is roughly {pi:.width$}");
         }
- 
-        
-
-
-
 }
