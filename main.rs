@@ -1,6 +1,78 @@
 fn main() {
 
         println!("");println!("");
+        println!("––––– 12, Nov 2022 –––––");
+        println!("––––– Function: date_12_11_22 –––––");
+        println!("");println!("");
+
+        println!("");println!("---EXAMPLE 4---");
+
+        /*Let us consider a function who_is_elder(), 
+        which compares two employees age and returns the elder one.*/
+
+        fn who_is_elder (emp1:Employee, emp2:Employee) -> Employee{
+                if emp1.age > emp2.age {
+                        return emp1;
+                     } else {
+                        return emp2;
+                     }
+                  }
+        
+        who_is_elder(emp3, emp4);
+
+        println!("");println!("---EXAMPLE 3---");
+        let emp3 = Employee {
+                company:String::from("Abacum"),
+                name:String::from("Felix"),
+                age:24
+        };
+
+        let emp4 = Employee{
+                company:String::from(""),
+                name:String::from("Frankie"),
+                age:9
+        };
+
+        //Passing structure instances of strucutre emp to a function
+        display(emp3);
+        display(emp4);
+
+        fn display ( emp: Employee) {
+                println!("Name is: {}, company is {}, age is: {}", emp.name, emp.company, emp.age);
+        }
+
+        println!("");println!("---EXAMPLE 2---");
+        //Initialize a mutable instance of the structure employee
+        let mut emp2 = Employee { 
+                name:String::from("Felix"),
+                company:String::from("Abacum"),
+                age: 24
+        };
+        
+        //mutate the structure
+        emp2.age = 25;
+
+        println!("Name is: {}, company is {}, and age is {}", emp2.name, emp2.company, emp2.age);
+
+        println!("");println!("---EXAMPLE 1---");
+        //Declare a structure Employee
+        struct Employee {
+                name:String,
+                company:String,
+                age:u32
+        }
+
+        //Initialize an instance of the structure emplyee
+        let emp1 = Employee {
+                company:String::from("Abacum"),
+                age:24,
+                name:String::from("Felix")
+        };
+
+        println!("Name is: {}, company is {}, and age is {}", emp1.name, emp1.company, emp1.age);
+
+
+        println!("");println!("");
         println!("––––– 9, Nov 2022 –––––");
         println!("––––– Function: date_09_11_22 –––––");
         println!("");println!("");
@@ -532,6 +604,7 @@ fn main() {
         println!("––––– 30, Oct 2022 –––––");
         println!("––––– Function: date_30_10_22 –––––");
         println!("");println!("");
+        date_30_10_22();
 
         fn date_30_10_22() {
 
@@ -605,6 +678,8 @@ fn main() {
                 println!("Pi is roughly {pi:.width$}");
         }
  
-        date_30_10_22();
+        
+
+ 
 
 }
