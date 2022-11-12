@@ -128,7 +128,7 @@ fn main() {
 
         println!("Name is: {}, company is {}, and age is {}", emp1.name, emp1.company, emp1.age);
 
-/*
+
 
         println!("");println!("");
         println!("––––– 9, Nov 2022 –––––");
@@ -738,6 +738,6 @@ fn main() {
  
         
 
-*/
+
 
 }
