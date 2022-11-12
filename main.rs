@@ -5,6 +5,56 @@ fn main() {
         println!("––––– Function: date_12_11_22 –––––");
         println!("");println!("");
 
+        //****Example 6
+        println!("");println!("---EXAMPLE 6---");
+        struct Point {
+                x: i32,
+                y: i32
+        }
+
+        impl Point {
+                //static method that creates objects of the Point structure
+                fn get_instance(x: i32, y: i32) -> Point {
+                        Point {x: x, y: y}
+                }
+
+                //display values of the structure's field
+                fn display(&self){
+                        println!("x = {}, y = {}", self.x, self.y);
+                }
+        }
+
+        let p1 = Point::get_instance(10, 20);
+        p1.display();
+
+        //****Example 5
+        //Methods in Structure
+        println!("");println!("---EXAMPLE 5---");
+
+
+        struct Rectangle {
+                width: i32,
+                height: i32
+        }
+        
+        impl Rectangle { 
+        //set the method's context
+        
+                fn area(&self) -> i32 { 
+                //define a method
+                        self.width * self.height
+                }
+        }
+
+        let small = Rectangle {
+                width:10,
+                height:20
+        };
+
+        println!("The width is {} and the height is {}", small.height, small.width);
+        println!("The area is then {}", small.area());
+
+        //*****Example 4
         println!("");println!("---EXAMPLE 4---");
 
         /*Let us consider a function who_is_elder(), 
@@ -17,30 +67,36 @@ fn main() {
                         return emp2;
                      }
                   }
-        
-        who_is_elder(emp3, emp4);
 
-        println!("");println!("---EXAMPLE 3---");
-        let emp3 = Employee {
+        let emp5 = Employee {
                 company:String::from("Abacum"),
                 name:String::from("Felix"),
                 age:24
         };
 
-        let emp4 = Employee{
+        let emp6= Employee{
                 company:String::from(""),
                 name:String::from("Frankie"),
                 age:9
         };
+        
+        let elder = who_is_elder(emp5, emp6);
+
+        println!("Elder is:");
+        display_name(elder);
+
+
+        //*****Example 3
+        println!("");println!("---EXAMPLE 3---");
+
 
         //Passing structure instances of strucutre emp to a function
-        display(emp3);
-        display(emp4);
 
-        fn display ( emp: Employee) {
-                println!("Name is: {}, company is {}, age is: {}", emp.name, emp.company, emp.age);
+        fn display_name (emp: Employee) {
+                println!("Name: {}", emp.name);
         }
 
+        //*****Example 2
         println!("");println!("---EXAMPLE 2---");
         //Initialize a mutable instance of the structure employee
         let mut emp2 = Employee { 
@@ -54,6 +110,7 @@ fn main() {
 
         println!("Name is: {}, company is {}, and age is {}", emp2.name, emp2.company, emp2.age);
 
+        //*****Example 1
         println!("");println!("---EXAMPLE 1---");
         //Declare a structure Employee
         struct Employee {
@@ -71,6 +128,7 @@ fn main() {
 
         println!("Name is: {}, company is {}, and age is {}", emp1.name, emp1.company, emp1.age);
 
+/*
 
         println!("");println!("");
         println!("––––– 9, Nov 2022 –––––");
@@ -680,6 +738,6 @@ fn main() {
  
         
 
- 
+*/
 
 }
