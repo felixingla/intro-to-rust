@@ -1,11 +1,147 @@
 fn main() {
+        println!("");println!("");
+        println!("––––– 14, Nov 2022 –––––");
+        println!("––––– Function: date_14_11_22 –––––");
+        println!("");println!("");
+
+        //––– Example 6 –––
+        println!("");println!("–––Example 6 –––");
+        
+        #[derive(Debug)]
+        enum GenderCategory {
+           Name(String),UsrId(i32)
+        }
+        
+        let p1 = GenderCategory::Name(String::from("Mohtashim"));
+        let p2 = GenderCategory::UsrId(100);
+        println!("{:?}",p1);
+        println!("{:?}",p2);
+     
+        match p1 {
+           GenderCategory::Name(val)=> {
+              println!("{}",val);
+           }
+           GenderCategory::UsrId(val)=> {
+              println!("{}",val);
+           }
+        }
+
+        //––– Example 5 –––
+        println!("");println!("––– Example 5 –––");
+
+        match is_even(5) {
+                Some(data) => {
+                   if data==true {
+                      println!("Even no");
+                   }
+                },
+                None => {
+                   println!("not even");
+                }
+             }
+          
+          fn is_even(no:i32)->Option<bool> {
+             if no%2 == 0 {
+                Some(true)
+             } else {
+                None
+             }
+          }
+        
+        //––– Example 4 –––
+        println!("");println!("––– Example 4 –––");
+
+        enum CarType {
+                Hatch,
+                Sedan,
+                SUV
+        }
+
+        fn print_size(car:CarType){
+                match car {
+                        CarType::Hatch => {
+                                println!("Small size car");
+                        },
+                        CarType::Sedan => {
+                                println!("Medium sized car");
+                        },
+                        CarType::SUV => {
+                                println!("Large sports utility car");
+                        }
+                
+                }
+        }
+
+        print_size(CarType::SUV);
+        print_size(CarType::Sedan);
+        print_size(CarType::Hatch);
+
+        //––– Example 3 –––
+        println!("");println!("––– Example 3 –––");
+        
+        /*
+        let result = is_even(3);
+        println!("Result is {:?}", result);
+        println!("{:?}", is_even(30));
+
+        fn is_even(no:i32) -> Option<bool> {
+                if no%2 == 0 {
+                        Some(true)
+                } else {
+                        None
+                }
+        } */
+
+        //––– Example 2 –––
+        println!("");println!("––– Example 2 –––");
+        /*
+        #[derive(Debug)]
+        enum GenderCategory2 {
+                Male,Female
+             }
+        
+        #[derive(Debug)]
+        struct Person{
+                name:String,
+                gender:GenderCategory2
+        }
+
+        let person1 = Person {
+                name:String::from("Felix"),
+                gender:GenderCategory2::Male
+        };
+        
+        let person2 = Person {
+                name:String::from("Frankie"),
+                gender:GenderCategory2::Female
+        };
+
+        println!("{:?}", person1);
+        println!("{:?}", person2);
+        */
+
+        //––– Example 1 –––
+        println!("");println!("––– Example 1 –––");
+        /*
+        #[derive(Debug)]
+        enum GenderCateogry {
+                Male, 
+                Female
+        }
+
+        let male = GenderCateogry::Male;
+        let female = GenderCateogry::Female;
+
+        println!("{:?}", male);
+        println!("{:?}", female);
+         */
 
         println!("");println!("");
         println!("––––– 12, Nov 2022 –––––");
         println!("––––– Function: date_12_11_22 –––––");
         println!("");println!("");
         date_12_11_22();
-
+ 
         fn date_12_11_22 (){
         //****Example 6
         println!("");println!("---EXAMPLE 6---");
@@ -737,4 +873,6 @@ fn main() {
                 let width: usize = 3;
                 println!("Pi is roughly {pi:.width$}");
         }
+
+
 }
