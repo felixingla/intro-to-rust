@@ -1,9 +1,29 @@
 fn main() {
+
         println!("");println!("");
         println!("––––– 14, Nov 2022 –––––");
         println!("––––– Function: date_14_11_22 –––––");
         println!("");println!("");
+        
+        date_14_11_22();
 
+        fn date_14_11_22() {
+
+        //––– Modules –––
+
+        pub mod movies {
+                pub mod english {
+                        pub fn play(name:String) {
+                                println!("Playing movie {}", name);
+                        }
+                }
+        }
+
+        use movies::english::play;
+
+        play("Airplane!".to_string());
+        
+        //––– ENUMS ––– 
         //––– Example 6 –––
         println!("");println!("–––Example 6 –––");
         
@@ -11,7 +31,7 @@ fn main() {
         enum GenderCategory {
            Name(String),UsrId(i32)
         }
-        
+       
         let p1 = GenderCategory::Name(String::from("Mohtashim"));
         let p2 = GenderCategory::UsrId(100);
         println!("{:?}",p1);
@@ -136,14 +156,16 @@ fn main() {
         println!("{:?}", female);
          */
 
+        }
+
         println!("");println!("");
         println!("––––– 12, Nov 2022 –––––");
         println!("––––– Function: date_12_11_22 –––––");
         println!("");println!("");
         date_12_11_22();
- 
-        fn date_12_11_22 (){
-        //****Example 6
+
+        fn date_12_11_22(){
+        //Example 6
         println!("");println!("---EXAMPLE 6---");
         struct Point {
                 x: i32,
@@ -161,11 +183,11 @@ fn main() {
                         println!("x = {}, y = {}", self.x, self.y);
                 }
         }
-
+        
         let p1 = Point::get_instance(10, 20);
         p1.display();
 
-        //****Example 5
+        //xample 5
         //Methods in Structure
         println!("");println!("---EXAMPLE 5---");
 
@@ -188,15 +210,15 @@ fn main() {
                 width:10,
                 height:20
         };
-
+        
         println!("The width is {} and the height is {}", small.height, small.width);
         println!("The area is then {}", small.area());
-
-        //*****Example 4
+        
+        //Example 4
         println!("");println!("---EXAMPLE 4---");
-
-        /*Let us consider a function who_is_elder(), 
-        which compares two employees age and returns the elder one.*/
+        
+        //Let us consider a function who_is_elder(), 
+        //which compares two employees age and returns the elder one.
 
         fn who_is_elder (emp1:Employee, emp2:Employee) -> Employee{
                 if emp1.age > emp2.age {
@@ -211,7 +233,7 @@ fn main() {
                 name:String::from("Felix"),
                 age:24
         };
-
+        
         let emp6= Employee{
                 company:String::from(""),
                 name:String::from("Frankie"),
@@ -219,12 +241,10 @@ fn main() {
         };
         
         let elder = who_is_elder(emp5, emp6);
-
+        
         println!("Elder is:");
         display_name(elder);
-
-
-        //*****Example 3
+        //Example 3
         println!("");println!("---EXAMPLE 3---");
 
 
@@ -233,8 +253,8 @@ fn main() {
         fn display_name (emp: Employee) {
                 println!("Name: {}", emp.name);
         }
-
-        //*****Example 2
+        
+        //Example 2
         println!("");println!("---EXAMPLE 2---");
         //Initialize a mutable instance of the structure employee
         let mut emp2 = Employee { 
@@ -248,7 +268,7 @@ fn main() {
 
         println!("Name is: {}, company is {}, and age is {}", emp2.name, emp2.company, emp2.age);
 
-        //*****Example 1
+        //Example 1
         println!("");println!("---EXAMPLE 1---");
         //Declare a structure Employee
         struct Employee {
@@ -266,7 +286,8 @@ fn main() {
 
         println!("Name is: {}, company is {}, and age is {}", emp1.name, emp1.company, emp1.age);
 
-        }
+        } 
+
 
         println!("");println!("");
         println!("––––– 9, Nov 2022 –––––");
@@ -874,5 +895,5 @@ fn main() {
                 println!("Pi is roughly {pi:.width$}");
         }
 
-
+/**/
 }
