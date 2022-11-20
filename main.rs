@@ -1,6 +1,28 @@
 fn main() {
 
         println!("");println!("");
+        println!("––––– 20, Nov 2022 –––––");
+        println!("––––– Function: date_14_11_22 –––––");
+        println!("");println!("");
+
+        let mut v = Vec::new();
+        v.push(5);
+        v.push(10);
+        v.push(15);
+
+        println!("size of vectior is: {}", v.len());
+        println!("{:?}",v);
+
+        let v2 = vec![1,2,3];
+        println!("{:?}",v2);
+
+        let v3 = vec![1,2,3,4,5];
+        if v3.contains (&2) {
+                println!("found 2");
+        }
+
+/*
+        println!("");println!("");
         println!("––––– 14, Nov 2022 –––––");
         println!("––––– Function: date_14_11_22 –––––");
         println!("");println!("");
@@ -895,5 +917,5 @@ fn main() {
                 println!("Pi is roughly {pi:.width$}");
         }
 
-/**/
+*/
 }
